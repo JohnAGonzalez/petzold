@@ -1,0 +1,7 @@
+.vs/
+Debug/
+ipch/
+*.VC.db
+*.sdf
+x64/
+*.aps

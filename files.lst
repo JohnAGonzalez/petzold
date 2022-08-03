@@ -1,0 +1,12 @@
+*.cmd
+*.lst
+*.sln
+*.vcxproj
+*.filters
+*.user
+*.cpp
+*.h
+*.rc
+*.ico
+*.bmp
+*.txt
