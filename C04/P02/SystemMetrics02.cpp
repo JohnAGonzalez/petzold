@@ -117,6 +117,22 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 		return 0;
 
+	case WM_MOUSEWHEEL:
+		if (GET_WHEEL_DELTA_WPARAM(wParam) > 0)
+			iVScrollPos -= 1;
+		else
+			iVScrollPos += 1;
+
+				iVScrollPos = max(0, min(iVScrollPos, NUMLINES - 1));
+		
+		if (iVScrollPos != GetScrollPos(hWnd, SB_VERT))
+		{
+			SetScrollPos(hWnd, SB_VERT, iVScrollPos, TRUE);
+			InvalidateRect(hWnd, NULL, TRUE);
+		}
+
+		return 0;
+
 	case WM_PAINT:
 		hDC = BeginPaint(hWnd, &ps);
 

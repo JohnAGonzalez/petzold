@@ -68,6 +68,7 @@ LRESULT CALLBACK WndProc(
 			hWnd, (HMENU)ID_EDIT, ((LPCREATESTRUCT)lParam)->hInstance, NULL);
 
 		return 0;
+  
 
 	case WM_SETFOCUS:
 		SetFocus(hWndEdit);
